@@ -14,7 +14,6 @@ endif   { return ENDIF; }
 endfor  { return ENDFOR; }
 return  { return RETURN; }
 main    { return MAIN; }
-int     { return INT_TYPE; }
 [a-zA-Z][a-zA-Z0-9_]*   { yylval.strval = strdup(yytext); return IDENTIFIER; }
 [0-9]+  { yylval.numval = atoi(yytext); return CONSTANT; }
 ">"     { return GREATER; }
